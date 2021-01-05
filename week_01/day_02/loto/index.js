@@ -1,80 +1,83 @@
-
-document.querySelector('#submit').addEventListener("click", (event) => {
+document.querySelector("#submit").addEventListener("click", (event) => {
   event.preventDefault();
   surnameIsPresent();
   nameIsPresent();
   emailIsPresent();
   emailIsCorrect();
-  formIscomplete() ? isWinning() : null
+  formIscomplete() ? isWinning() : null;
 });
 
-
 function surnameIsPresent() {
-  console.log("Hello checkSurname")
-  let surname = document.querySelector("#surname").value
-  let surnameMessage = document.querySelector("#no_surname")
+  console.log("Hello checkSurname");
+  let surname = document.querySelector("#surname").value;
+  let surnameMessage = document.querySelector("#no_surname");
 
   if (!surname.length) {
     surnameMessage.style.display = "block";
     return false;
-  }
-  else {
+  } else {
     surnameMessage.style.display = "none";
     return true;
   }
 }
 
 function nameIsPresent() {
-  console.log("Hello checkName")
-  let name = document.querySelector("#name").value
-  let nameMessage = document.querySelector("#no_name")
+  console.log("Hello checkName");
+  let name = document.querySelector("#name").value;
+  let nameMessage = document.querySelector("#no_name");
 
   if (!name.length) {
     nameMessage.style.display = "block";
     return false;
-  }
-  else {
+  } else {
     nameMessage.style.display = "none";
     return true;
   }
 }
 
 function emailIsPresent() {
-  console.log("Hello checkName")
-  let email = document.querySelector("#email").value
-  let noEmailMessage = document.querySelector("#no_email")
+  console.log("Hello checkName");
+  let email = document.querySelector("#email").value;
+  let noEmailMessage = document.querySelector("#no_email");
 
   if (!email.length) {
     noEmailMessage.style.display = "block";
     return false;
-  }
-  else {
+  } else {
     noEmailMessage.style.display = "none";
     return true;
   }
 }
 
 function emailIsCorrect() {
-  console.log("Hello checkEmail")
-  let email = document.querySelector("#email").value
-  let emailIncorrectMessage = document.querySelector("#email_incorrect")
+  console.log("Hello checkEmail");
+  let email = document.querySelector("#email").value;
+  let emailIncorrectMessage = document.querySelector("#email_incorrect");
 
-  if ( email.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/) && email.length > 8 && email.length < 30 ) {
+  if (
+    email.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/) &&
+    email.length > 8 &&
+    email.length < 30
+  ) {
     emailIncorrectMessage.style.display = "none";
-    return true
-  }
-  else {
+    return true;
+  } else {
     emailIncorrectMessage.style.display = "block";
     return false;
   }
 }
 
 function formIscomplete() {
-  if ( nameIsPresent() && surnameIsPresent() && emailIsPresent() && emailIsCorrect() && numbersAreCorrect() ) {
+  if (
+    nameIsPresent() &&
+    surnameIsPresent() &&
+    emailIsPresent() &&
+    emailIsCorrect() &&
+    numbersAreCorrect()
+  ) {
     console.log("TOUT EST OK");
     return true;
-  }
-  else {
+  } else {
     hidePreviousResults();
     return false;
   }
@@ -85,16 +88,15 @@ function numbersAreCorrect() {
     .querySelector("#loto_numbers")
     .value.split("")
     .map((number) => Number(number))
-    .filter(number =>  !Number.isNaN(number));
+    .filter((number) => !Number.isNaN(number));
 
-    if (submittedNumbers.length == 6) {
-      document.querySelector("#numbers_incorrect").style.display = "none"
-      return true
-    }
-    else {
-      document.querySelector("#numbers_incorrect").style.display = "block"
-      return false
-    }
+  if (submittedNumbers.length == 6) {
+    document.querySelector("#numbers_incorrect").style.display = "none";
+    return true;
+  } else {
+    document.querySelector("#numbers_incorrect").style.display = "block";
+    return false;
+  }
 }
 
 function isWinning() {
@@ -103,7 +105,6 @@ function isWinning() {
     .querySelector("#loto_numbers")
     .value.split("")
     .map((number) => Number(number));
-
 
   let randomNumbers = [
     Math.floor(Math.random() * 10),
@@ -116,7 +117,7 @@ function isWinning() {
 
   let isLostMessage = document.querySelector("#is_lost");
   let isWonMessage = document.querySelector("#is_won");
-  let winnerNumbers = document.querySelector("#winner_numbers")
+  let winnerNumbers = document.querySelector("#winner_numbers");
 
   if (
     JSON.stringify(submittedNumbers.sort()) ===
@@ -128,8 +129,8 @@ function isWinning() {
   } else {
     isLostMessage.style.display = "block";
     isWonMessage.style.display = "none";
-    winnerNumbers.innerHTML = randomNumbers
-    winnerNumbers.style.display = "block"
+    winnerNumbers.innerHTML = randomNumbers;
+    winnerNumbers.style.display = "block";
     return false;
   }
 }
