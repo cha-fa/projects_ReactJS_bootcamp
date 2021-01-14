@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Notre contenu de header -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+  <container class="d-flex justify-content-center mt-5">
+    <form class="bg-light form-signin col-6 m-5 p-5">
+      <div class="text-center mb-4">
+        <img class="mb-4 w-50" src="fight.gif" alt="gif" >
+        <h1 class="h3 mb-3 font-weight-normal">Let's Play</h1>
+        <p>Ouvre la console de ton navigateur, et prépares toi pour la bagarre.</p>
+        <p>Tu peux à tout moment checker les scores en faisant <strong>game.showStats()</strong> en console.</p>
+      </div>
+
+      <div class="form-label-group">
+        <label for="characters">Choisis un personnage:</label>
+        <select id="character" name="character" class="form-control mb-3">
+          <option value="no_character">Aucun, je laisse le programme jouer tout seul</option>
+          <option value="all_character">Tous, parce que j'aime la castagne</option>
+          <option value="fighter">Fighter</option>
+          <option value="paladin">Paladin</option>
+          <option value="monk">Monk</option>
+          <option value="berzerker">Berzerker</option>
+          <option value="assassin">Assassin</option>
+          <option value="wizard">Wizard</option>
+        </select>
+      </div>
+
+      <div class="form-label-group" id="name_section">
+        <label for="name" >Ton nom de joueur:</label>
+        <input type="text" id="name" name="name" value="noname" class="form-control mb-3" required>
+      </div>
+
+      <input type="submit" id="confirm_game" value="Lancer la partie !" class="btn btn-lg btn-dark btn-block">
+
+    </form>
+</container>
+
+  <script src="attack.js"></script>
+  <script src="character.js"></script>
+  <script src="fighter.js"></script>
+  <script src="paladin.js"></script>
+  <script src="monk.js"></script>
+  <script src="berzerker.js"></script>
+  <script src="assassin.js"></script>
+  <script src="wizard.js"></script>
+  <script src="game.js"></script>
+  <script src="turn.js"></script>
+  <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
