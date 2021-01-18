@@ -128,9 +128,9 @@ function handleDrop(e) {
     //draggedSrcEl.innerHTML = this.innerHTML;
     //this.innerHTML = e.dataTransfer.getData('text/html');
     this.parentNode.removeChild(draggedSrcEl);
-    var dropHTML = e.dataTransfer.getData('text/html');
+    const dropHTML = e.dataTransfer.getData('text/html');
     this.insertAdjacentHTML('beforebegin',dropHTML);
-    var dropElem = this.previousSibling;
+    const dropElem = this.previousSibling;
     addDnDHandlers(dropElem);
 
   }
@@ -157,6 +157,6 @@ function addDnDHandlers(elem) {
 
 }
 
-var pictures = document.querySelectorAll('.picture-cf');
+const pictures = document.querySelectorAll('.picture-cf');
 [].forEach.call(pictures, addDnDHandlers);
 
