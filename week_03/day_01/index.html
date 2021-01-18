@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Hello, food!</title>
+</head>
+<body>
+  <container class="d-flex justify-content-center h-100">
+    <div class= "col">
+
+      <div class="row">
+        <h1>Produits frais et bio</h1>
+      </div>
+
+      <div class="row">
+        <img src="food.jpg" class="h-75 w-75">
+      </div>
+
+      <ul class= "row">
+        <p class="m-3">Accueil</p>
+        <p class="m-3" id="menu-btn">Menu</p>
+        <p class="m-3" id="pictures-btn">Photos</p>
+      </ul>
+
+      <div class="card w-50 tab-cf" id="menu-content" style="display: none;">
+        <div class="card-body">
+          <h5 class="card-title">Notre menu</h5>
+          <p class="card-text">
+            <li class="meal">Repas 1</li>
+            <li class="meal">Repas 2</li>
+            <li class="meal">Repas 3</li>
+            <a href="#" class="card-link" id="change-menu">Marre de ce menu ? Changez-le !</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row tab-cf w-50" id="pictures-content" style="display: none;">
+        <div class="media">
+          <img class="mr-3 img-thumbnail w-25 picture-cf" src="food_01.jpg" alt="Generic placeholder image" draggable="true">
+          <img class="mr-3 img-thumbnail w-25 picture-cf" src="food_02.jpg" alt="Generic placeholder image" draggable="true">
+          <img class="mr-3 img-thumbnail w-25 picture-cf" src="food_03.jpg" alt="Generic placeholder image" draggable="true">
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <button type="button" id="modal-btn" class="btn btn-primary invisible" data-toggle="modal" data-target="#exitModalPopup">
+      Launch demo modal
+    </button>
+
+    <div class="modal fade" id="exitModalPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Ne me quittes pas</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Ne manques pas nos prochains menus farfelus, reçois notre newsletter mensuelle !
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </container>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
