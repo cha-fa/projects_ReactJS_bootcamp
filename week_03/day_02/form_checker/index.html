@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Hello there!</title>
+</head>
+<body>
+  <div class="container d-flex justify-content-center mt-5">
+    <form class="col-6" >
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Ton nom">
+            <small id="errorName" class="form-text text-danger invisible">Ne peut pas être vide</small>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="inputSurname" aria-describedby="emailHelp" placeholder="Ton prénom">
+            <small id="errorSurame" class="form-text text-danger invisible">Doit avoir au moins 3 caractères.</small>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputAge" aria-describedby="emailHelp" placeholder="Ton âge">
+        <small id="errorAge" class="form-text text-danger invisible">Doit être supérieur ou égal à 18.</small>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Ton adresse email">
+        <small id="errorEmail" class="form-text text-danger invisible">Doit être un format d'email valide</small>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputEmail2" aria-describedby="emailHelp" placeholder="Confirme ton adresse email">
+        <small id="errorEmail2" class="form-text text-danger invisible">Ne correspond pas au premier email</small>
+      </div>
+      <div class="form-group">
+        <small id="emailHelp" class="form-text text-muted">(Doit avoir au minimum 6 caractères)</small>
+        <input type="password" class="form-control" id="inputPassword1" placeholder="Mot de passe">
+        <small id="errorPassword" class="form-text text-danger invisible">Doit avoir min 6 caractères</small>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Confirme ton mot de passe">
+        <small id="errorPassword2" class="form-text text-danger invisible">Ne correspond pas au premier mot de passe</small>
+      </div>
+      <div class="form-check">
+        <small id="errorCGV" class="form-text text-danger invisible">Les CGV doivent être acceptées pour valider</small>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="acceptCGV" value="accepted">
+        <label class="form-check-label" for="exampleRadios1">
+          J'accepte les CGV
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="refuseCGV" value="refused" checked>
+        <label class="form-check-label" for="exampleRadios2">
+          Je n'accepte pas les CGV
+        </label>
+      </div>
+      <a type="submit" class="btn btn-primary" href="pages/confirmation.html">Valider</a>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
