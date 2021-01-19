@@ -12,15 +12,101 @@
 </head>
 <body>
   <div class="container d-flex justify-content-center">
-  <div class="card col-8">
-    <div class="card-body">
-      <h5 class="card-title">What are we cooking today?</h5>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <ul class="list-group list-group-flush">
-      </ul>
+    <div class="col-12">
+
+      <div class="row d-flex justify-content-center">
+        <h3>What are we cooking today?</h3>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <button type="button" class="btn btn-primary mr-5" id="classicRecipe">Cookies please!</button>
+        <button type="button" class="btn btn-warning ml-5" id="createRecipe">Create my recipe</button>
+      </div>
+
+      <div class="row">
+
+        <div class="col-6 d-flex justify-content-center invisible " id="cookieRecipe">
+          <div class="card ">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <ul class="list-group list-group-flush">
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 invisible" id="recipeCreation">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Recipe's Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Title">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Ingredient</label>
+                <input type="text" class="form-control" id="ingredient" placeholder="Ingredient">
+              </div>
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Type of food</label>
+                <select class="form-control" id="foodType">
+                  <option>wet</option>
+                  <option>dry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Type of measurement</label>
+                <select class="form-control" id="measurementType">
+                  <option>cup</option>
+                  <option>tsp</option>
+                  <option>tbsp</option>
+                </select>
+              </div>
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Quantité</label><br>
+                <input type="number" id="quantity" name="quantity"  min="0.10" max="15" step="0.1">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <h4 id="confirmationIngredient"></h4>
+              <p id="ingredient list"></p>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+              <button type="button" class="btn btn-primary mr-5" id="addIngredient">Add this ingredient</button>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Cooking time in minutes</label><br>
+                <input type="number" id="heatingDuration" name="minutes"  min="0" max="15" step="1">
+              </div>
+              <div class="form-group col-6">
+                <label for="exampleFormControlSelect1">Temperature</label><br>
+                <input type="number" id="heatingTemp" name="temperature"  min="0" max="15" step="1">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="recipeResume">Recipe Description</label>
+              <textarea class="form-control" id="recipeResume" rows="3"></textarea>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+              <button type="button" class="btn btn-primary mr-5" id="confirmRecipe">Confirm this recipe</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-  <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
