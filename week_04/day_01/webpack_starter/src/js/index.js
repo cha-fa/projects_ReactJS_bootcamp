@@ -10,3 +10,5 @@ const helloBabel = () => {
 }
 
 helloBabel()
+
+console.log("ma variable", process.env.MAKEY)
