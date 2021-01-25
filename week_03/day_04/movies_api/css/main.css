@@ -1,0 +1,39 @@
+.jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/jumb_1.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "Georgia", Garamond, serif;
+}
+
+.movie-card {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.4s, opacity 0.4s;
+  border-radius: 10px;
+  border-color: #22235b;
+  border-width: 4px;
+}
+
+.movie-card.not-visible {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+hr {
+  border-top: 1px solid white;
+  width: 50%;
+}
+
+input[type=text] {
+  border-radius: 14px;
+}
+
+.btn-read{
+  background-color: #22235b !important;
+}
+
+h5 {
+  color: #22235b;
+  font-style: bold;
+  font-size: 30px;
+}

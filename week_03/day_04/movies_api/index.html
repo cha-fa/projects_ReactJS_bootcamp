@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <title>Find a movie!</title>
+</head>
+<body class="bg-light">
+
+  <div class="jumbotron">
+    <h1 class="display-4 ml-4 ">BROWSE THOUSANDS OF MOVIES!</h1>
+    <p class="lead ml-4">Just give a movie title, or some keywords if you don't remember the exact title!</p>
+    <hr class="my-4 ml-4 .text-light">
+    <p class="ml-4">We'll provide you with all the information you need to choose a movie to watch tonight</p>
+    <form class="form-inline ml-2 w-100">
+      <div class="form-group mx-sm-3 mb-2 w-50">
+        <input type="text" class="form-control w-100" id="inputMovie" placeholder="Write something here">
+      </div>
+      <button type="submit" class="btn btn-light mb-2" id="submitBtn">Search!</button>
+    </form>
+  </div>
+
+  <div class="container d-flex align-items-center">
+    <div class="col d-flex align-items-center">
+      <div class="row">
+        <h5 class="invisible" id="noResults">Sorry, we couldn't find any results. <br>Make sure you're trying with at least 2 characters or check your spelling ;)</h5>
+      </div>
+
+      <div class="row" id="moviesCards">
+      </div>
+
+
+      <div id="moviesModals">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/e094d25800.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/observer.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+<!--         <div id="infoResult">
+          <div class="card movie-card" id="infoResult">
+            <div class="card-body p-5">
+              <h5>Your results will be displayed here !</h5>
+            </div>
+          </div>
+        </div>
+      </div> -->

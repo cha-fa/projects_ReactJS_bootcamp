@@ -3,7 +3,7 @@
 // const fetch = require('node-fetch')
 
 const url = `https://api.weatherbit.io/v2.0/forecast/daily?lat=47.2668824&lon=-1.4410916&key=${API_KEY}`
-
+let movieContent
 
 async function getRecords() {
     try {

@@ -1,0 +1,11 @@
+ .card {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.4s, opacity 0.4s;
+  border-radius: 10px;
+}
+
+.not-visible {
+  transform: translateX(-200px);
+  opacity: 0;
+}
