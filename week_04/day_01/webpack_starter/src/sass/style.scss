@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap";
+
+$color-red: rgb(255, 20, 20);
+
+@font-face {
+  font-family: 'Big Noodles';
+  src: url('../fonts/big_noodle_titling.ttf');
+}
+
+body {
+  background-image: url('../images/cat.jpg');
+}
+
+p {
+  color: $color-red;
+  font-family: 'Big Noodles';
+}
