@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Ceci est la configuration principale de ton projet.
 // Ici, tu peux écrire les différentes options que tu souhaites, et dire à Webpack quoi faire.
-module.exports = {
+const config = {
   // Ceci est le chemin vers le "point d'entrée" de ton app.
   // C'est depuis ce fichier que Webpack commencera à travailler.
   entry: './src/js/index.js',
@@ -98,4 +98,6 @@ module.exports = {
   watch: true
 };
 
-
+module.exports = env => {
+  return config
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["style/index.scss"],"names":[],"mappings":"AAIA;EACI,kBALO;EAMP,OALY;;;AAQhB;EACI,OARU","file":"src.e31bb0bc.css","sourceRoot":"../src","sourcesContent":["$bg-color: #242424;\n$primary-color: #fff;\n$title-color: #a2d1fc;\n\nbody {\n    background-color: $bg-color;\n    color: $primary-color;\n}\n\nh1 {\n    color: $title-color;\n}\n"]}
