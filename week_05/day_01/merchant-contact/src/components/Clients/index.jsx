@@ -1,6 +1,6 @@
 import React from 'react';
 import faker from 'faker';
-import Client from '../../components/Client';
+import Client from 'components/Client';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Clients = () => {

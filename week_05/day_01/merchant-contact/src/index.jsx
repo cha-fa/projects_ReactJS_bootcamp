@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clients from './components/Clients'
+import Clients from 'components/Clients'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

@@ -1,5 +1,5 @@
-import Email from '../../components/Email';
-import Phone from '../../components/Phone'
+import Email from 'components/Email';
+import Phone from 'components/Phone'
 
 const Client = (props) => {
   const { firstName, lastName, phoneNumber, picture, job } = props.data;
