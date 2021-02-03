@@ -22,41 +22,37 @@ const Books = () => {
     setFavoriteFilter(formData);
   };
 
-  const filterSearch = () => {
-    const filteredBooks = allBooks.filter((b) =>
-      b.title.toLowerCase().includes(userKeyword)
-    );
-    setCurrentResults(filteredBooks);
-  };
-
-  const filterFavorite = () => {
-    setCurrentResults(currentResults.filter((b) => b.isFav));
-  };
-
-  const filterWish = () => {
-    setCurrentResults(currentResults.filter((b) => b.read));
-  };
-
   const filterResults = () => {
-    if (userKeyword && !favoriteFilter && !wishFilter) {
-      filterSearch();
-    } else if (userKeyword && favoriteFilter && !wishFilter) {
-      filterSearch();
-      filterFavorite();
-    } else if (!userKeyword && favoriteFilter && wishFilter) {
-      filterFavorite();
-      filterWish();
-    } else if (userKeyword && !favoriteFilter && wishFilter) {
-      filterSearch();
-      filterWish();
-    } else if (!userKeyword && !favoriteFilter && wishFilter) {
-      filterWish();
+    setCurrentResults(allBooks);
+    if (userKeyword && favoriteFilter && wishFilter) {
+      const filteredBooks = allBooks.filter(
+        (b) => b.title.toLowerCase().includes(userKeyword) && b.isFav && b.read
+      );
+      setCurrentResults(filteredBooks);
+    } else if (userKeyword && !favoriteFilter && !wishFilter) {
+      const filteredBooks = allBooks.filter((b) =>
+        b.title.toLowerCase().includes(userKeyword)
+      );
+      setCurrentResults(filteredBooks);
     } else if (!userKeyword && favoriteFilter && !wishFilter) {
-      filterFavorite();
-    } else if (userKeyword && favoriteFilter && wishFilter) {
-      filterSearch();
-      filterWish();
-      filterFavorite();
+      const filteredBooks = allBooks.filter((b) => b.isFav);
+      setCurrentResults(filteredBooks);
+    } else if (!userKeyword && !favoriteFilter && wishFilter) {
+      const filteredBooks = allBooks.filter((b) => b.read);
+      setCurrentResults(filteredBooks);
+    } else if (userKeyword && favoriteFilter && !wishFilter) {
+      const filteredBooks = allBooks.filter(
+        (b) => b.title.toLowerCase().includes(userKeyword) && b.isFav
+      );
+      setCurrentResults(filteredBooks);
+    } else if (!userKeyword && favoriteFilter && wishFilter) {
+      const filteredBooks = allBooks.filter((b) => b.isFav && b.read);
+      setCurrentResults(filteredBooks);
+    } else if (userKeyword && !favoriteFilter && wishFilter) {
+      const filteredBooks = allBooks.filter(
+        (b) => b.title.toLowerCase().includes(userKeyword) && b.read
+      );
+      setCurrentResults(filteredBooks);
     } else {
       setCurrentResults(allBooks);
     }
@@ -69,10 +65,6 @@ const Books = () => {
   return (
     <Container className="Books">
       <Row>
-        <p>
-          check states fav {favoriteFilter ? "true" : "false"} wish {wishFilter}{" "}
-          input {userKeyword}
-        </p>
         <SearchForm
           sendInput={getKeyword}
           sendFav={getFavorite}
