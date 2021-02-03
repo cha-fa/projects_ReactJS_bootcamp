@@ -70,7 +70,12 @@ const Books = () => {
           sendFav={getFavorite}
           sendWish={getWish}
         />
-        <p>Il y a {currentResults.length} résultats</p>
+      </Row>
+      <Row>
+        <p>
+          Il y a {currentResults.length} résultats <br />
+          {currentResults.length === 0 && "Aucun résultat pour cette recherche"}
+        </p>
       </Row>
       <Row>
         {currentResults.map((bookData) => (
