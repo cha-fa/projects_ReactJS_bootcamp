@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
   <Container>
-    <p>Hello</p>
+    <h3>Search for a book</h3>
     <Books />
   </Container>
 );

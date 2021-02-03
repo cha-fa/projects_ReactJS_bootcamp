@@ -2,7 +2,7 @@
   "books": [
     [
       {
-        "isFav": true,
+        "isFav": false,
         "read": false,
         "title": "Unlocking Android",
         "isbn": "1933988673",

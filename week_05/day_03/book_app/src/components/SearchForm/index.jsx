@@ -19,7 +19,7 @@ const SearchForm = ({ sendInput, sendFav, sendWish }) => {
   return (
     <form className="SearchFrom">
       <input onChange={handleChangeInput} type="text" id="search" />
-
+      <br />
       <label htmlFor="fav">
         <input onChange={handleChangeFav} type="checkbox" id="fav" name="fav" />
         Voir mes favoris
