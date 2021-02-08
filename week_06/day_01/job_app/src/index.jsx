@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Navbar from "components/Navbar";
 import Jobs from "pages/Jobs";
 import Job from "pages/Job";
@@ -35,11 +35,18 @@ const App = () => {
     );
   }, [previousClickedJobs]);
 
-  console.log(newClickedJob, "NEW CLICKED JOB IN APP");
-
   return (
     <Router>
       <Navbar handleSearchInput={handleSearchInput} />
+      <p>You previously viewed :</p>
+      <ul>
+        {previousClickedJobs &&
+          previousClickedJobs.slice(-1 * 6).map((job) => (
+            <li key={job[1]}>
+              <Link to={"/job/" + job[1]}>{job[0]} </Link>
+            </li>
+          ))}
+      </ul>
       <main>
         <Switch>
           <Route path="/" exact>
