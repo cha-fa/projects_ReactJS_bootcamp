@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-const Jobs = ({ searchKeyword }) => {
+const Jobs = ({ searchKeyword, handleClickedJob }) => {
   const [searchResults, setSearchResults] = useState(undefined);
 
   const fetchJobs = () => {
@@ -16,6 +16,11 @@ const Jobs = ({ searchKeyword }) => {
     });
   };
 
+  const handleClick = (event) => {
+    const jobInfo = [event.target.innerHTML, event.target.id];
+    handleClickedJob(jobInfo);
+  };
+
   useEffect(() => {
     searchKeyword.length > 2 ? fetchJobs() : setSearchResults(undefined);
   }, [searchKeyword]);
@@ -27,7 +32,9 @@ const Jobs = ({ searchKeyword }) => {
         {searchResults &&
           searchResults.map((job) => (
             <li key={job.uuid}>
-              <Link to={"/job/" + job.uuid}>{job.suggestion}</Link>
+              <Link to={"/job/" + job.uuid} id={job.uuid} onClick={handleClick}>
+                {job.suggestion}{" "}
+              </Link>
             </li>
           ))}
       </ul>

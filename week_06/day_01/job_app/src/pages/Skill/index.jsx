@@ -16,13 +16,7 @@ const Skill = () => {
     fetch(`http://api.dataatwork.org/v1/skills/${skill_uuid}/related_jobs`)
       .then((response) => response.json())
       .then((response) => {
-        console.log(
-          "response in fetch jobs",
-          response.jobs,
-          "skill name",
-          response.skill_name
-        );
-        setCurrentRelatedJobs(response.jobs);
+        setCurrentRelatedJobs(response.jobs.slice(0, 100));
         setCurrentSkill(response.skill_name);
       });
   };
