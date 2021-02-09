@@ -1,0 +1,11 @@
+.lightMode,
+.lightMode * {
+  background-color: white;
+  color: black;
+}
+
+.darkMode,
+.darkMode * {
+  background-color: darken(white, 90%);
+  color: lighten(black, 90%);
+}

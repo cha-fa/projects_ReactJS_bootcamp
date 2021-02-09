@@ -1,0 +1,23 @@
+{
+  "presentation": "Vous pourrez trouver ci-dessous la liste de mes projets. J'en ai réalisé certains lors de ma formation chez The Hacking Project, et d'autres sont des projets personnels.",
+  "works": [
+    {
+      "title": "Projet 1",
+      "img": "coming soon",
+      "description": "tatata",
+      "id": "001"
+    },
+    {
+      "title": "Projet 2",
+      "img": "coming soon",
+      "description": "tototo",
+      "id": "002"
+    },
+    {
+      "title": "Projet 3",
+      "img": "coming soon",
+      "description": "tititi",
+      "id": "003"
+    }
+  ]
+}
