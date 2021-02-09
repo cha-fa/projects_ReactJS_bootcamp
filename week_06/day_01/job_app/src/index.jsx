@@ -11,22 +11,17 @@ const App = () => {
   const storedSearches = JSON.parse(
     localStorage.getItem("thp_storage_previous_jobs") || "[]"
   );
-  const [newClickedJob, setNewClickedJob] = useState("");
   const [previousClickedJobs, setPreviousClickedJobs] = useState(
     storedSearches || []
   );
 
   const handleClickedJob = (job) => {
-    setNewClickedJob(job);
+    setPreviousClickedJobs((prevJobs) => [...prevJobs, job]);
   };
 
   const handleSearchInput = (input) => {
     setSearchInput(input);
   };
-
-  useEffect(() => {
-    setPreviousClickedJobs((prevJobs) => [...prevJobs, newClickedJob]);
-  }, [newClickedJob]);
 
   useEffect(() => {
     localStorage.setItem(

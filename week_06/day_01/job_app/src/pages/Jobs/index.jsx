@@ -23,6 +23,7 @@ const Jobs = ({ searchKeyword, handleClickedJob }) => {
 
   useEffect(() => {
     searchKeyword.length > 2 ? fetchJobs() : setSearchResults(undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchKeyword]);
 
   return (
