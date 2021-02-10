@@ -1,0 +1,38 @@
+$color-black: rgb(25, 25, 25);
+$color-red: rgb(210, 10, 50);
+$color-white: rgb(255, 255, 255);
+$color-grey: rgb(120, 120, 120);
+
+h1 {
+  color: $color-red;
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  color: $color-white !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+p {
+  color: $color-white !important;
+}
+
+#NoteDisplay {
+  min-height: 350px;
+  word-wrap: break-word;
+}
+
+#newNote,
+#SaveButton {
+  background-color: $color-red;
+  border: none;
+  color: $color-white;
+  padding: 12px;
+  margin: 3px;
+}
+
+#Preview {
+  cursor: pointer;
+}
