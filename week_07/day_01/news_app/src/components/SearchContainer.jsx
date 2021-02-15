@@ -55,6 +55,7 @@ const SearchContainer = () => {
   }, []);
 
   useEffect(() => {
+    dispatch(fetchNewsSuccess([]));
     fetchNews(search.url);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search.url]);
@@ -74,6 +75,7 @@ const SearchContainer = () => {
             </option>
           ))}
       </select>
+      <p>{search.loading && "Recherche en cours..."}</p>
       <ul>
         {search.news &&
           search.news.map((article) => (
