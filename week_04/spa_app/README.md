@@ -6,7 +6,6 @@
 ## Find a game !
 
 You can clone this repository and start the server (npm run start) in your console, and browse the app at http://localhost:8080.
-You can also visit it at  https://cha-fa.github.io/ !
 
 ## Search a game
 The default results are the upcoming games, but in the corner right you can search for a game, type your keywords, hit enter and voilà !. 
