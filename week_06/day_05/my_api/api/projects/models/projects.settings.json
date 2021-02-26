@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    },
+    "clients": {
+      "model": "clients"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

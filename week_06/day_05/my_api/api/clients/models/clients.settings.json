@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    },
+    "projects": {
+      "collection": "projects"
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
